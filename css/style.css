@@ -2103,7 +2103,7 @@ header.header-light .logo-2 {
   width: 100%;
   overflow: hidden;
   top: 0;
-  background: var(--bg-dark-1);
+  background: #9C0924;
 }
 
 #topbar.topbar-dark {
@@ -7626,6 +7626,8 @@ ol.ol-style-1.dark li::before{
   border-radius:30px;
   -moz-border-radius:30px;
   -webkit-border-radius:30px;
+  background: #fff;
+  color: #9C0924;
 }
 
 .dark-scheme .social-icons i {
@@ -7641,9 +7643,9 @@ ol.ol-style-1.dark li::before{
 }
 
 .social-icons i:hover {
-  background: #fff;
+  background: #9C0924;
   border-color: #eceff3;
-  color: #333;
+  color: #fff;
 }
 
 .social-icons.big a{
