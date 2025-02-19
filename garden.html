@@ -243,17 +243,17 @@
                                         <div class="col-sm-6">
                                             <div class="row g-4">
                                                 <div class="col-lg-12">
-                                                    <img src="images/misc/3.webp" class="w-100 rounded-1 wow zoomIn" alt="">
+                                                    <img src="images/allimg/garden/image00038.webp" class="w-100 rounded-1 wow zoomIn" alt="">
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-sm-6">
                                             <div class="row g-4">
                                                 <div class="col-lg-12">
-                                                    <img src="images/misc/1.webp" class="w-100 rounded-1 wow zoomIn" alt="">
+                                                    <img src="images/allimg/garden/5.webp" class="w-100 rounded-1 wow zoomIn" alt="">
                                                 </div>
                                                 <div class="col-lg-12">
-                                                    <img src="images/misc/2.webp" class="w-100 rounded-1 wow zoomIn" alt="">
+                                                    <img src="images/allimg/garden/10.webp" class="w-100 rounded-1 wow zoomIn" alt="">
                                                 </div>
                                             </div>
                                         </div>
@@ -324,7 +324,7 @@
 
                             <div class="spacer-double"></div>
                             
-                            <div class="row g-4">
+                            <!-- <div class="row g-4">
                                 <div class="col-lg-12">
                                     <h2 class="mb-0">Latest <span class="id-color-2">Projects</span></h2>
                                 </div>
@@ -380,8 +380,38 @@
                                     <a class="btn-main wow fadeInUp" href="projects.html">View All Projects</a>
                                 </div>
 
+                            </div> -->
+                            <div class="relative wow fadeIn" style="margin-bottom: 20px;">
+                                <div class="owl-custom-nav menu-float">
+                                    <a class="btn-prev">❮</a>
+                                    <a class="btn-next">❯</a>
+                
+                                    <div id="project-single-carousel" class="owl-carousel owl-theme">
+                                        <!-- Project Images -->
+                                        <div class="item">
+                                            <div class="hover relative rounded-1 overflow-hidden text-light">
+                                                <img src="images/allimg/garden/11.webp" class="w-100" alt="">
+                                            </div>
+                                        </div>
+                                      
+                                        <div class="item">
+                                            <div class="hover relative rounded-1 overflow-hidden text-light">
+                                                <img src="images/allimg/garden/image00040.webp" class="w-100" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="item">
+                                            <div class="hover relative rounded-1 overflow-hidden text-light">
+                                                <img src="images/allimg/garden/image00069.webp" class="w-100" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="item">
+                                            <div class="hover relative rounded-1 overflow-hidden text-light">
+                                                <img src="images/allimg/garden/image00080.webp" class="w-100" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-
                         </div>
                     </div>
                 </div>
@@ -526,7 +556,29 @@
     ================================================== -->
     <script src="js/plugins.js"></script>
     <script src="js/designesia.js"></script>
+    <script>
+        $(document).ready(function () {
+            var owl = $("#project-single-carousel");
+            owl.owlCarousel({
+                items: 3,
+                loop: true,
+                margin: 10,
+                nav: false,
+                autoplay: true,
+                autoplayTimeout: 2000, // 2 seconds
+                autoplayHoverPause: true
+            });
 
+            // Custom navigation
+            $(".btn-next").click(function () {
+                owl.trigger("next.owl.carousel");
+            });
+
+            $(".btn-prev").click(function () {
+                owl.trigger("prev.owl.carousel");
+            });
+        });
+    </script>
 </body>
 
 </html>
