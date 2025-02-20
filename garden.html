@@ -177,7 +177,7 @@
                             </div>
                             <div class="de-flex-col">
                                 <div class="menu_side_area">          
-                                    <a href="contact.html" class="btn-main btn-line">Get In Touch</a>
+                                     <!-- <a href="contact.html" class="btn-main btn-line">Get In Touch</a> -->
                                     <span id="menu-btn"></span>
                                 </div>
 
@@ -212,7 +212,7 @@
                         </div>
                     </div>
                 </div>
-                <img src="images/logo-wm.webp" class="abs end-0 bottom-0 z-2 w-20" alt="">
+                <!-- <img src="images/logo-wm.webp" class="abs end-0 bottom-0 z-2 w-20" alt=""> -->
                 <div class="de-overlay"></div>
             </section>
 
@@ -234,8 +234,8 @@
                             <div class="row g-4 gx-5">
 
                                 <div class="col-lg-6">
-                                    <h2><span class="id-color-2">Transform</span> Your Outdoor Space into a <span class="id-color-2">Beautiful Oasis</span></h2>
-                                    <p>At Gardyn, we believe that your garden should be a reflection of your personal style and a sanctuary where you can relax and unwind. Our team of expert garden designers is dedicated to bringing your vision to life, creating stunning outdoor spaces that combine beauty, functionality, and sustainability.</p>
+                                    <h2><span class="id-color-2">The Beauty </span> Of Our Gardens <span class="id-color-2"></span></h2>
+                                    <p>Our gardens offer a breathtaking blend of greenery and elegance, creating the perfect ambiance for any event. With beautifully manicured lawns and scenic landscapes, the space provides a serene and refreshing atmosphere. Whether it’s a wedding, reception, or private gathering, our lush gardens set the stage for unforgettable moments. Experience nature’s charm in every corner of <span class="id-color-2">Palemar Garden</span> .</p>
                                 </div>
 
                                 <div class="col-lg-6">
@@ -383,8 +383,8 @@
                             </div> -->
                             <div class="relative wow fadeIn" style="margin-bottom: 20px;">
                                 <div class="owl-custom-nav menu-float">
-                                    <a class="btn-prev">❮</a>
-                                    <a class="btn-next">❯</a>
+                                    <a class="btn-prev"></a>
+                                    <a class="btn-next"></a>
                 
                                     <div id="project-single-carousel" class="owl-carousel owl-theme">
                                         <!-- Project Images -->
@@ -406,9 +406,10 @@
                                         </div>
                                         <div class="item">
                                             <div class="hover relative rounded-1 overflow-hidden text-light">
-                                                <img src="images/allimg/garden/image00080.webp" class="w-100" alt="">
+                                                <img src="images/allimg/garden/IMG_3673.webp" class="w-100" alt="">
                                             </div>
                                         </div>
+                                       
                                     </div>
                                 </div>
                             </div>
@@ -473,12 +474,13 @@
                             <div class="spacer-20"></div>
 
                             <div class="fw-bold text-white"><i class="icofont-location-pin me-2 id-color-2"></i>Location</div>
-                            Morgans Gate, Mangalore,Karnataka
+                           <p style="margin-left: 23px;"> Morgans Gate, Mangalore,<br/>Karnataka-575001</p>
 
                             <div class="spacer-20"></div>
 
                             <div class="fw-bold text-white"><i class="icofont-envelope me-2 id-color-2"></i>Send a Message</div>
-                            contact@gardyn.com                            
+                            <p style="margin-left: 23px;">     contact@palemargarden.com   </p>
+                                                 
                         </div>
                     </div>
                 </div>
@@ -558,20 +560,30 @@
         $(document).ready(function () {
             var owl = $("#project-single-carousel");
             owl.owlCarousel({
-                items: 3,
                 loop: true,
                 margin: 10,
                 nav: false,
                 autoplay: true,
                 autoplayTimeout: 2000, // 2 seconds
-                autoplayHoverPause: true
+                autoplayHoverPause: true,
+                responsive: {
+                    0: {
+                        items: 2 // Show 1 item on mobile screens
+                    },
+                    768: {
+                        items: 2// Show 2 items on tablets
+                    },
+                    1024: {
+                        items: 3 // Show 3 items on desktops
+                    }
+                }
             });
-
+    
             // Custom navigation
             $(".btn-next").click(function () {
                 owl.trigger("next.owl.carousel");
             });
-
+    
             $(".btn-prev").click(function () {
                 owl.trigger("prev.owl.carousel");
             });
