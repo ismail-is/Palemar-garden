@@ -837,7 +837,7 @@ function tln_body2div($attary, $trans_image_path)
  * @param string $trans_image_path
  * @param boolean $block_external_images
 
- * @return string                       Sanitized html safe to show on your pages.
+ * @return string                       Sanitized html safe to show on your Pages   <h5>Company</h5>.
  */
 function tln_sanitize(
     $body,
